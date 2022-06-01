@@ -43,3 +43,10 @@ function convertirGR(id){
     document.getElementById("grados").value = grad;
     document.getElementById("radianes").value = grad;
 }
+function mostra_ocultar(valorMo){
+    if(valorMo=="val_Mostrar"){
+        document.getElementById("divMo").style.display = 'block';
+    }else if(valorMo=="val_ocultar"){
+        document.getElementById("divMo").style.display = 'none';
+    }
+}
