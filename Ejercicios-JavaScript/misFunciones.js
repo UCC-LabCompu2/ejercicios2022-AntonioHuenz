@@ -167,6 +167,8 @@ function dibujarAuto(posX,posY){
     let ctx = canvas.getContext("2d");
     let img;
 
+    canvas.width = canvas.width;
+
     img = new Image();
     img.src = "images/auto.png";
     console.log(posX,posY);
@@ -175,4 +177,27 @@ function dibujarAuto(posX,posY){
         ctx.drawImage(img, posX,posY);
         console.log("Se deberia dibujar la imagen");
     }
+}
+
+x = 0;
+dx = 2;
+
+function animarAuto(){
+    let canvas = document.getElementById("myCanvas");
+    let ctx = canvas.getContext("2d");
+    let img;
+
+    canvas.width = canvas.width;
+
+    img = new Image();
+    img.src = "images/auto.png";
+
+    img.onload = function (){
+        ctx.drawImage(img, x, 100);
+    }
+
+    if(x>canvas.width){
+        x = 0;
+    }
+    x = x+dx;
 }
