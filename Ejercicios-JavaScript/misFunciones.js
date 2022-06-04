@@ -268,3 +268,22 @@ function animarAuto(){
     }
     x = x+dx;
 }
+
+function guardarLocalStorage(){
+     let distancia, unidad;
+     distancia = document.getElementById('distancia').value;
+     unidad = document.getElementsByName('unidad')[0].value;
+     localStorage.setItem("distanciaLS", distancia);
+     localStorage.setItem("unidadLS", unidad);
+     window.open('2_web.html');
+
+}
+function cargarLocalStorage(){
+    let cant, un;
+    cant = localStorage.getItem("distanciaLS");
+    un = localStorage.getItem("unidadesLS");
+
+    document.getElementById("dist").value = cant + " " + un;
+
+
+}
