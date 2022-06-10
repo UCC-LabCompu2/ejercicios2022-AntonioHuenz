@@ -284,6 +284,4 @@ function cargarLocalStorage(){
     un = localStorage.getItem("unidadesLS");
 
     document.getElementById("dist").value = cant + " " + un;
-
-
 }
