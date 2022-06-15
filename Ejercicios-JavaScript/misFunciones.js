@@ -131,7 +131,7 @@ function dibujarCirculoCuadrado(){
 
     ctx.arc(xMax/2,yMax/2,20,0,2*Math.PI);
     ctx.stroke();
-    ctx.fillStyle = "#3c91d2";
+    ctx.fillStyle = "#be1414";
     ctx.fill();
 
 }
@@ -199,7 +199,7 @@ function dibujarCuadriculado(){
         ctx.beginPath();
         ctx.moveTo(i,0);
         ctx.lineTo(i,yMax);
-        ctx.strokeStyle = "#0d0d69";
+        ctx.strokeStyle = "#590b23";
         ctx.stroke();
         ctx.closePath();
         i = i+20;
@@ -250,8 +250,8 @@ x = 0;
 dx = 2;
 
 function animarAuto(){
-    let canvas = document.getElementById("myCanvas");
-    let ctx = canvas.getContext("2d");
+    let canvas = document.getElementById('myCanvas');
+    let ctx = canvas.getContext('2d');
     let img;
 
     canvas.width = canvas.width;
@@ -272,7 +272,7 @@ function animarAuto(){
 function guardarLocalStorage(){
      let distancia, unidad;
      distancia = document.getElementById('distancia').value;
-     unidad = document.getElementsByName('unidad')[0].value;
+     unidad = document.getElementsByName('unidades')[0].value;
      localStorage.setItem("distanciaLS", distancia);
      localStorage.setItem("unidadLS", unidad);
      window.open('2_web.html');
@@ -281,7 +281,7 @@ function guardarLocalStorage(){
 function cargarLocalStorage(){
     let cant, un;
     cant = localStorage.getItem("distanciaLS");
-    un = localStorage.getItem("unidadesLS");
+    un = localStorage.getItem("unidadLS");
 
     document.getElementById("dist").value = cant + " " + un;
 }
